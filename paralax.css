@@ -1,0 +1,89 @@
+.container{
+    max-width: 960px;
+    margin : 0 auto;
+    background : #f9f9f9;
+    font-size: 24px;
+    padding:25px;
+}
+.parallax{
+    background: url("images/image.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height:300px;
+   
+}
+.div-paralax{
+    width: 100px;
+    height: 100px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+    
+}
+.h1-paralax{
+    color: #f9f9f9;
+    text-align: center;
+    border: solid 2px;
+    position: relative;
+    padding: 7px;
+    font-size: 30px;
+   
+    
+    
+}
+.h1-paralax1{
+    color:#f9f9f9;
+    text-align: center;
+   width:700px;
+   margin-left: auto;
+   
+   margin-right: auto;
+   font-size: 20px;
+   
+
+}
+
+.parallax1{
+    background: url("images/team.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height:350px;
+  
+}
+
+.parallax2{
+    background: url("images/pexels-pixabay-209224.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height:200px;
+  
+}
+.h1-parallax2{
+    
+    text-align: center;
+  
+   margin-left: auto;
+   
+   margin-right: auto;
+   font-size: 50px;
+  
+   font-weight: 500;;
+
+}
+
+.parallax3{
+    background: url("") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+   
+    
+   -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
+}
+
+/*testimonial*/

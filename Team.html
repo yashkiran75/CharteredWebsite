@@ -1,0 +1,803 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bishan R. Shah & Co</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="paralax.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+
+
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZXJBVDf7R4JqmSpopVPoduIGWx1IwpBM"></script>
+    <script type="text/javascript" src="js/plugins.js"></script>
+    <style>
+
+.demo{
+     background: #e5e5e5;
+     }
+.team-sec{
+    border: 2px solid  #32759b;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+    z-index: 1;
+    position: relative;
+}
+.team-sec:before,
+.team-sec:after{
+    content: "";
+    width: 100%;
+    height: 104%;
+    background:  #3786b4;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    transform: translateY(-50%) scaleX(0.3);
+    transition: all 0.3s ease 0s;
+}
+.team-sec:after{
+    width: 106%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleY(0.25);
+}
+.team-sec:hover:before{ transform: translateY(-50%) scaleX(0.7); }
+.team-sec:hover:after{ transform: translate(-50%, -50%) scaleY(0.7); }
+.team-sec img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: all 0.3s ease 0s;
+}
+.team-sec .team-content{
+    width: 93%;
+    padding: 25px 0 10px;
+    background: #3786b4;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    opacity: 0;
+    -webkit-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+    clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+    transform: translateX(-50%);
+    transition: all 0.3s cubic-bezier(0.5, 0.2,0.1,0.9);
+}
+.team-sec:hover .team-content{
+    bottom: 10px;
+    opacity: 1;
+}
+.team-sec .title{
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin: 0;
+}
+.team-sec .post{
+    display: block;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.team-sec .social{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.team-sec .social li{
+    display: inline-block;
+    margin: 0 5px;
+}
+.team-sec .social li a{
+    display: block;
+    width: 37px;
+    height: 37px;
+    line-height: 35px;
+    border-radius: 50%;
+    background: #fff;
+    font-size: 25px;
+    color: #23759b;
+    transition: all 0.3s ease 0s;
+}
+.team-sec .team-content a:hover{
+   color: azure;
+  
+}
+.team-sec .social li a:hover{
+    background: linear-gradient(to bottom,#335bb3, rgb(21, 82, 151));
+    box-shadow: 0 0 0 5px rgba(255,255,255,0.3);
+    color: #fff;
+}
+@media only screen and (max-width: 990px){
+    .team-sec{ margin-bottom: 30px; }
+}
+
+
+    .navbar-brand{
+        font-size: 30px;
+    }
+    .collapse li{
+        font-size: 19px;
+        font-weight: 600;
+    }
+
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- NAVIGATION -->
+        <nav class="navbar fixed-top navbar-default bottom">
+            <div class="container-nav">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img class="navbar-brand" src="images/ca.png" style="padding:5px;">
+                    <a class="navbar-brand" href="#header">BISHAN R. SHAH & CO.</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="AboutUs.html">ABOUT</a></li>
+                        <li><a href="Services.html">SERVICES</a></li>
+                        <li><a href="Team.html">TEAM</a></li>
+                        <li><a href="Contact.html">CONTACT</a></li>
+                    </ul>
+                </div> 
+            </div> 
+        </nav>
+       <!-- NAVIGATION --> 
+
+<!--breadcrum-->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Team</li>
+            </ol>
+        </nav>
+<!--breadcrum-->
+
+        <div class="parallax1">
+        </div>
+
+        <section id="about" class="light">
+            <header class="title">
+                <h2>Our <span>Team </span></h2>
+
+                <p>
+                    At Bishan R.Shah & Co.,our pool of human resources helps us provide efficient service to our
+                    clients. We host a team of 24 in-house professionals. 
+
+                    We have teams dedicated to serving clients on their specific requirements of tax assurance, audit
+                    and taxation issues by maintaining a regular cycle of filing returns and conducting audits on
+                    specified due dates.
+                    Our structured process of working is perfected to minimize errors.
+
+                    We create a perfect culture to make our employees feel comfortable and perform at optimum efficiency
+                    and increased productivity at work.
+                     
+                </p>
+            </header>
+        </section>
+
+        <!--testmony-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-sm-offset-1 col-sm-10">
+                        <div id="testimonial-slider" class="owl-carousel">
+                            <div class="testimonial">
+                                
+                                <p class="description">
+                                    
+                                    
+                                    The founder of Bishan R. Shah & Co. has been practicing as a CA for more than 20
+                                    years now.
+                                    As a veteran of the trade and a man with a clear vision, he is a member of several
+                                    committees
+                                    and a regular consultant to various corporate organizations and has appeared on
+                                    television channels to discuss GST.
+                                    He was the chairman of Indirect Taxes committee of Ahmedabad Branch of WIRC of ICAI
+                                    for the year 2015-16.
+                                    In addition to delivering more than 100 lectures on GST and advising many businesses
+                                    on the same, Bishan has
+                                    written several articles on various topics of GST.
+                                    He is the Management Committee Head and Treasurer of ICAI, Ahmedabad and a Special
+                                    Invitee and member of Indirect Taxes
+                                    Committee of ICAI, New Delhi.
+                                    Along with being a Visiting Faculty for indirect taxes at Nirma University, Bishan
+                                    is also a Finance Committee member at Sports Club of Gujarat.
+                                    His precise knowledge of the trade and the eagerness to maintain transparency with
+                                    his clients make him a worthy asset. He has delivered several
+                                    lectures at Service Tax Commission, Ahmedabad, and Excise department on topics like
+                                    Service Tax & Service Tax Audit in the past.
+                                    His other professional credentials are DRIM (ICAI) – Diploma in Insurance & Risk
+                                    Management & DISA (ICAI) – Diploma in Information and Systems Audit.
+                                </p>
+
+                                <div class="testimonial-review">
+                                    <div class="pic">
+                                        <img src="images/bishan.jpg" alt="">
+                                    </div>
+                                    <h4 class="testimonial-title">
+                                        CA Bishan R. Shah
+                                        <small>FOUNDER AND MANAGING PARTNER</small>
+
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="testimonial">
+                                <p class="description">
+
+                                    She is a young professional with a fresh outlook on industrial aspects.
+                                    Being an Associate Chartered Accountant with a Masters in Commerce, she is thorough
+                                    in her knowledge of the trade and is in tune to deliver the best-expected results on
+                                    audit and certification.
+                                    Her expertise lies in direct taxes and is also professionally trained to handle
+                                    matters on VAT and Service Tax. <br>
+
+
+                                    She’s been a part of the organization’s growth story for more than seven years now
+                                    and is ambitiously looking forward to many more.
+                                    She is an excellent team leader who efficiently handles a team of 8 members.
+
+
+                                </p>
+
+                                <div class="testimonial-review">
+                                    <div class="pic">
+                                        <img src="images/binal shah.jpeg" alt="">
+                                    </div>
+                                    <h4 class="testimonial-title">
+                                        CA Binal H. Shah
+                                        <small>PARTNER</small>
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="testimonial">
+                                <p class="description">
+                                    Rahul has been an essential part of the firm for four years and is proficient in
+                                    statutory audit,
+                                    internal audit, stock audit, tax audit, certification, co-operative society audit
+                                    and revenue audit of banks.
+                                    He is also knowledgeable about direct taxation and GST.
+
+                                </p>
+
+                                <div class="testimonial-review">
+                                    <div class="pic">
+                                        <img src="images/rahul shah.jpg" alt="">
+                                    </div>
+                                    <h4 class="testimonial-title">
+                                        CA Rahul S.Shah
+                                        <small>PARTNER</small>
+                                    </h4>
+                                </div>
+                            </div>
+                          
+
+                                
+
+
+                            <div class="testimonial">
+                                <p class="description">
+                                    He is working with the firm since 2002.
+                                    Having experience of more than 19 years.
+                                </p>
+
+                                <div class="testimonial-review">
+                                    <div class="pic">
+                                        <img src="images/shalin shah.jpeg" alt="">
+                                    </div>
+                                    <h4 class="testimonial-title">
+                                        Shailin Shah
+                                        <small>Chief Executive Officer</small>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+        <script>
+
+            $(document).ready(function () {
+                $("#testimonial-slider").owlCarousel({
+                    items: 1,
+                    itemsDesktop: [1199, 1],
+                    itemsDesktopSmall: [979, 1],
+                    itemsTablet: [768, 1],
+                    pagination: true,
+                    autoPlay: true
+                });
+            });
+
+        </script>
+<!--testmony-->
+        <section id="about" class="light">
+            <header class="title">
+                <h2>PROFESSIONAL EXPERIENCE OF <span>PARTNERS</span></h2>
+            </header>
+        </section>
+
+
+
+
+
+     
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-4">
+                        <div class="team-sec">
+                            <img src="images/Bishan shah.jpg">
+                            <div class="team-content">
+                               <a href="team1.html"> <h3 class="title">Bishan R. Shah</h3></a>
+                                <span class="post">Chartered Accountant</span>
+                                <ul class="social">
+                                    <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-4">
+                        <div class="team-sec">
+                            <img src="images/binal shah - copy.jpg">
+                            <div class="team-content">
+                               <a href="team2.html"> <h3 class="title">Binal H. Shah</h3></a>
+                                <span class="post">Chartered Accountant</span>
+                                <ul class="social">
+                                    <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                   
+                   
+                    <div class="col-md-6 col-sm-4">
+                        <div class="team-sec">
+                            <img src="images/rahul.jpg">
+                            <div class="team-content">
+                               <a href="team3.html"> <h3 class="title">Rahul S. Shah</h3></a>
+                                <span class="post">Chartered Accountant</span>
+                                <ul class="social">
+                                    <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-4">
+                        <div class="team-sec">
+                            <img src="images/shalin.jpg">
+                            <div class="team-content">
+                               <a href="team4.html"> <h3 class="title">Shailin Shah</h3></a>
+                                <span class="post">Chief Executive Officer</span>
+                                <ul class="social">
+                                    <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--   <div class="container-about">
+
+
+
+            <div class="row">
+                <div class="col-md-6">
+
+
+                    <h2>CA Bishan R. <span>Shah</span></h2>
+                    
+                    <p>
+                        The Partner is in practice as Chartered Accountant since last 22 years.<br>
+
+                        He chairman of Indirect Taxes committee of Ahmedabad Branch of
+                        WIRC of ICAI for the year 2015-16, when GST law passed the hurdle of
+                        constitutional amendment!<br>
+
+                        Firm has implemented GST for more than 100 clients and advised many
+                        businesses on GST.<br>
+
+                        He has delivered more than 100 lectures on GST on various forums throughout
+                        India. He has also delivered lectures on various aspects of Service Tax, Excise
+                        to government departments i.e. Service Tax and Excise Department.<br>
+
+                        He has also written many articles on various topics on GST and his e-book on
+                        exemptions and job work is published by ICAI.<br>
+
+                        He also represents clients before various indirect taxes authorities including
+                        CESTAT.<br>
+
+                        He is appearing on TV channels for updates of GST!
+                        Also having knowledge in following areas: <br>
+
+
+
+                    </p>
+                    </header>
+
+
+                </div>
+
+
+
+                
+
+                    <div class=" col-sm-6 " style="margin-top: 50px;">
+                        <div class="box">
+                            <img src="images/Bishan shah.jpg">
+                            <div class="box-content">
+                                <h3 class="title"> Bishan R. <span>Shah</h3>
+                                <span class="post">CA </span>
+                                <p style="font-size: 10px;">B.Com, LLB, F.C.A., D.I.S.A (ICAI), DIRM (ICAI)<br>
+                                    Partner<br>
+                                    Managing Committee Member of ICAI Ahmedabad<br>
+                                    Special Invitee & Member of Indirect Taxes Committee of ICAI, New Delhi<br>
+                                    Chairman of Indirect Taxes Committee of Ahmedabad Branch of ICAI<br>
+                                    Chairman of Professional Development Committee, WICASA<br>
+                                    Chairman of Indirect Taxes Study Group of Chartered Accountants’ Association<br>
+                                    Finance committee member of Sports Club of Gujarat<br>
+                                    Visiting Faculty for Indirect Taxes in Nirma University<br>
+                                    Former Member of Indirect Taxes Committee of Committee GCCI<br>
+                                    Membership No : 102444<br>
+                                    Contact details : +91-98250 23573<br>
+                                    bishan@brsca.in
+                                </p>
+                            </div>
+                            <ul class="icon">
+                                <li><a href="#"><i class="fa fa-search"></i></a></li>
+                                <li><a href="#"><i class="fa fa-link"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                
+
+
+            </div>
+
+            
+        <section id="about" class="light">
+            <header class="tittle1">
+                <h3> 1) Audit and Assurance and Taxation of Banking <br> <span>Industry: </span></h3>
+               
+                <p><ul>
+                    <li>Statutory Audit under Income Tax, Company Law,<br> Co-operative 		
+                        	   Society, Charitable Trust, Bank, VAT</li>
+                    <li>Internal Audit</li>
+                    <li>Concurrent Audit</li>
+                    <li>Stock Audit</li>
+                    <li>Certification work</li>
+                </ul>
+                </p>
+
+                <h3> 2) Taxation  <span> matters:</span></h3>
+               
+                <p><ul>
+                    <li>VAT, TDS and GST</li>
+                    <li>Service Tax, Excise and Customs</li>
+                    <li>Excise and Service Tax Audit</li>
+                    <li>Stock Audit</li>
+                    <li>Direct tax</li>
+                </ul>
+                </p>
+
+                <h3>3) Goods and Services <span>Tax</span></h3>
+                <h3>4) Real Estate Regulatory  <span>Authority</span></h3>
+              
+            </header>
+          </section>
+
+          <br>
+          <br>
+
+          <div class="row">
+
+            <div class="col-md-6">
+                <section id="about" class="light">
+
+
+
+                <h2>CA Binal H. <span>Shah</span></h2>
+                
+                <p>
+                    The Partner is in practice as Chartered Accountant since last 7 years 
+                    and Partner having knowledge in following areas:            
+                    
+
+
+
+                </p>
+               <h3> 1)       Audit and Assurance and Taxation of  Banking<span> Industry:</span></h3>
+               <p>
+               <ul>
+                   <li> Statutory Audit</li>
+                   <li> Internal Audit</li>
+                   <li> Concurrent Audit</li>
+                   <li> Stock Audit</li>
+                   <li> Tax Audit	</li>
+                   <li> Certification work</li>
+               </ul>
+            </p>
+            <h3>2)	Taxation <span>matters</span></h3>
+                <p>
+                   <ul> <li> VAT and TDS
+                    
+                    </li>
+                    <li>
+                         Direct taxation
+                    </li></ul>
+                </p>
+                <h3>3) Goods and Services  <span>Tax</span></h3>
+
+
+</section>
+
+                </header>
+
+
+            </div>
+
+
+            
+       
+            <div class=" col-sm-6 " style="margin-top: 50px;">
+                <div class="box">
+                    <img src="images/binal shah - copy.jpg">
+                    <div class="box-content">
+                        <h3 class="title"> Binal H.. <span>Shah</h3>
+                        <span class="post">CA </span>
+                        <p style="font-size: 10px;">  M.Com, LLB, A.C.A <br>
+
+                            Partner   <br> 
+                            Membership No :  140301<br>
+                            Contact details : +91-97234 95664<br>
+                                            binal@brsca.in<br>
+                            
+                        </p>
+                    </div>
+                    <ul class="icon">
+                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                        <li><a href="#"><i class="fa fa-link"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+          </div>
+          <br>
+          <br>
+        
+            <div class="row">
+
+                <div class="col-md-6">
+                    <section id="about" class="light">
+    
+    
+    
+                    <h2>CA Rahul S. <span>Shah</span></h2>
+                    <br>
+                    <p>The Partner is in practice as Chartered Accountant since last 4 years 
+                        and Partner having knowledge in following areas:
+                        </p>
+                        <h3> 1)       Audit and Assurance and Taxation of  Banking<span> Industry:</span></h3>
+                        <ul>
+                            <li> Statutory Audit</li>
+                            <li>  Stock Audit</li>
+                            <li> Tax Audit	</li>
+                            <li>  Certification work</li>                                  
+                           
+                        
+                            <li> Internal Audit	</li>
+                            <li>  Co-operative Society Audit</li>
+                            <li>Revenue Audit of  Banks</li>
+                        </ul>
+                        <h3>2)	Taxation <span> matters:</span></h3>
+                        <ul>
+                            <li>Direct taxation</li>
+                        </ul>
+                        <h3>3)      Goods and Services <span>Tax</span></h3>
+
+                    </section>
+                </div>
+           
+
+                <div class=" col-sm-6 " style="margin-top: 50px;">
+                    <div class="box">
+                        <img src="images/rahul.jpg">
+                        <div class="box-content">
+                            <h3 class="title"> Rahul S.  <span>Shah</h3>
+                            <span class="post">CA </span>
+                            <p style="font-size: 10px;"> 
+                                B.Com, A.C.A<br>
+                                Partner<br>
+                                Membership No : 164191<br>
+                                Contact details : +91-93773 42983<br>
+                                                rahulshah@brsca.in<br>
+                                
+                            </p>
+                        </div>
+                        <ul class="icon">
+                            <li><a href="#"><i class="fa fa-search"></i></a></li>
+                            <li><a href="#"><i class="fa fa-link"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+               
+            
+
+
+
+
+        </div>
+
+        <br>
+        <br>
+       
+                
+
+        
+
+              
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <section id="about" class="light">
+        
+        
+        
+                        <h2>Shailin <span>Shah</span></h2>
+                        
+                        
+                        <p>He is working with the firm since 2002.<br> Having experience of more than 19 years.
+                            
+                            </p>
+                       </section>
+                       </div>
+
+                       <div class=" col-sm-6 " style="margin-top: 50px;">
+                        <div class="box">
+                            <img src="images/shalin.jpg">
+                            <div class="box-content">
+                                <h3 class="title">Shailin  Shah  </h3>
+                                <span class="post"> Chief Executive Officer</span>
+                                <p style="font-size: 10px;"> 
+                                   <br>
+                Partner
+                                    
+                                </p>
+                            </div>
+                            <ul class="icon">
+                                <li><a href="#"><i class="fa fa-search"></i></a></li>
+                                <li><a href="#"><i class="fa fa-link"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+        
+                      
+
+
+
+</div>-->
+
+
+
+
+        <!--testmony-->
+
+    </div>
+
+
+
+    <!--footer-->
+
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+
+            <h3>Bishan R. Shah & Co.</h3>
+
+            <p class="footer-links">
+                <a href="index.html">Home</a>
+                ·
+                <a href="AboutUs.html">About</a>
+                ·
+                <a href="Services.html">Services</a>
+                ·
+                <a href="Team.html">Team</a>
+                ·
+                <a href="Contact.html">Contact</a>
+            </p>
+
+            <p class="footer-company-name">Bishan R. Shah & Co. &copy; 2015</p>
+        </div>
+
+        <div class="footer-center">
+
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>A-101,Nirman,Opp. Havmor Restaurant</span> Ahmedabad, India</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+91 7926422001</p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:support@company.com">info@brsca.com</a></p>
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            <p class="footer-company-about">
+                <span>About the company</span>
+                We know how important it is to assist your business
+                in a multi-dimensional yet holistic way. We can help you reduce overheads, claim benefits, prepare for
+                audits, documentation,
+                licensing and make smart financial decisions.
+                &amp; SEO Learner.
+            </p>
+
+            <div class="footer-icons">
+
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!--footer-->
+
+
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
